@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Feralisk</defName>
+    <label>Feralisk</label>
+    <description>Someone once thought that creating supersized spiders for silk production was a good idea. Their home planet is now reduced to a Marble World; a world completely purged by atomic fire.</description>
+    <statBases>
+      <MoveSpeed>7.20</MoveSpeed>
+      <ComfyTemperatureMin>-2</ComfyTemperatureMin>
+      <MarketValue>2100</MarketValue>
+      <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <meleeDamageBaseAmount>12</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>LegAttackTool</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>100</defaultCooldownTicks>
+        <meleeDamageBaseAmount>15</meleeDamageBaseAmount>
+        <meleeDamageDef>ToxicBite</meleeDamageDef>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.03</BorealForest>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>Arachnid</body>
+      <herdAnimal>true</herdAnimal>
+      <baseBodySize>1.00</baseBodySize>
+      <baseHungerRate>1.7</baseHungerRate>
+      <baseHealthScale>1.2</baseHealthScale>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+      <leatherColor>(93,74,68)</leatherColor>
+      <leatherLabel>feralisk skin</leatherLabel>
+      <leatherInsulation>1.2</leatherInsulation>
+      <wildness>0.985</wildness>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>30</gestationPeriodDays>
+      <manhunterOnTameFailChance>0.1</manhunterOnTameFailChance>
+      <litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>12</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.24</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.20</minAge>
+          <soundWounded>Pawn_Feralisk_Wounded</soundWounded>
+          <soundDeath>Pawn_Feralisk_Death</soundDeath>
+          <soundCall>Pawn_Feralisk_Call</soundCall>
+          <soundAngry>Pawn_Feralisk_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <IncidentDef>
+    <defName>ManhunterPack</defName>
+    <workerClass>IncidentWorker_ManhunterPack</workerClass>
+    <baseChance>2.0</baseChance>
+    <category>ThreatBig</category>
+    <minRefireDays>15</minRefireDays>
+    <pointsScaleable>true</pointsScaleable>
+    <pawnKinds>
+      <li>ArcticLion</li>
+      <!--<li>Barbslinger</li>
+      <li>Feralisk</li>
+      <li>Frostmite</li>
+      <li>Groundrunner</li>
+      <li>Needlepost</li>
+      <li>RaptorShrimp</li>
+      <li>TerramorphWorm</li>-->
+    </pawnKinds>
+  </IncidentDef>
+
+</Defs>

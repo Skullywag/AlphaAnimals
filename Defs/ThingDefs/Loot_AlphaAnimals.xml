@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- =============== Resource Bases ==================== -->
+
+	<ThingDef Name="ResourceBase" Abstract="True">
+		<thingClass>ThingWithComps</thingClass>
+		<label>unspecified resource</label>
+		<category>Item</category>
+		<resourceReadoutPriority>Middle</resourceReadoutPriority>
+		<useHitPoints>true</useHitPoints>
+		<selectable>true</selectable>
+		<altitudeLayer>Item</altitudeLayer>
+		<stackLimit>75</stackLimit>
+		<comps>
+			<li>
+				<compClass>CompForbiddable</compClass>
+			</li>
+		</comps>
+		<alwaysHaulable>true</alwaysHaulable>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		<rotatable>false</rotatable>
+		<pathCost>15</pathCost>
+	</ThingDef>
+
+	<ThingDef Name="ResourceVerbBase" ParentName="ResourceBase" Abstract="True">
+		<equipmentType>Primary</equipmentType>
+		<techLevel>Neolithic</techLevel>
+		<comps>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+
+	<!-- =============== Arctic Lion Wool ==================== -->
+
+	<ThingDef ParentName="ResourceBase">
+		<defName>ArcticLionWool</defName>
+		<label>arctic lion wool</label>
+		<description>It's amazingly soft and warm, and coveted all over the galaxy.</description>
+		<graphicData>
+			<texPath>Things/Item/Resource/Wool</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<color>(255,255,255)</color>
+		</graphicData>
+		<statBases>
+			<MaxHitPoints>90</MaxHitPoints>
+			<MarketValue>13.0</MarketValue>
+			<Flammability>0.85</Flammability>
+			<DeteriorationRate>1.3</DeteriorationRate>
+		</statBases>
+		<stackLimit>100</stackLimit>
+		<stuffProps>
+			<categories>
+				<li>Fabric</li>
+			</categories>
+			<color>(255,255,255)</color>
+			<statOffsets>
+				<ArmorRating_Heat>0.08</ArmorRating_Heat>
+			</statOffsets>
+			<statFactors>
+				<ArmorRating_Heat>2.0</ArmorRating_Heat>
+				<Insulation_Cold>2.5</Insulation_Cold>
+				<Insulation_Heat>2.5</Insulation_Heat>
+			</statFactors>
+		</stuffProps>
+		<thingCategories>
+			<li>Textiles</li>
+		</thingCategories>
+	</ThingDef>
+
+</Defs>

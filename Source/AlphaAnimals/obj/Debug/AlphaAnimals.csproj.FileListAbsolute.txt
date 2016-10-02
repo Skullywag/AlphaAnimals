@@ -1,0 +1,12 @@
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\AlphaAnimals.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\AlphaAnimals.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha13Win\RimWorld1135Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\AlphaAnimals.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\AlphaAnimals.pdb
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\Assembly-CSharp.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\bin\Debug\UnityEngine.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.csprojResolveAssemblyReference.cache
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.dll
+C:\Users\mjsku\Desktop\RimWorldAlpha15cWin\RimWorld1284Win\Mods\AlphaAnimals\Source\AlphaAnimals\obj\Debug\AlphaAnimals.pdb

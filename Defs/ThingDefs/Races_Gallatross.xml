@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+
+  <ThingDef Name="BaseBullet" Abstract="True">
+    <category>Projectile</category>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Projectile</altitudeLayer>
+    <thingClass>Bullet</thingClass>
+    <label>bullet</label>
+    <useHitPoints>False</useHitPoints>
+    <neverMultiSelect>True</neverMultiSelect>
+    <graphicData>
+      <shaderType>Transparent</shaderType>
+    </graphicData>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseBullet">
+    <defName>Bullet_Rock</defName>
+    <label>rock</label>
+    <graphicData>
+      <texPath>Things/Projectiles/Boulder</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <explosionRadius >1.9</explosionRadius >
+      <damageDef>Bomb</damageDef>
+      <DamageAmountBase>9</DamageAmountBase>
+      <Speed>20</Speed>
+    </projectile>
+  </ThingDef>
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Gallatross</defName>
+    <label>gallatross</label>
+    <description>
+      TODO: add description
+    </description>
+    <statBases>
+      <MoveSpeed>1.00</MoveSpeed>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <MarketValue>5000</MarketValue>
+      <AccuracyTouch>0.91</AccuracyTouch>
+      <AccuracyShort>0.71</AccuracyShort>
+      <AccuracyMedium>0.50</AccuracyMedium>
+      <AccuracyLong>0.32</AccuracyLong>
+      <RangedWeapon_Cooldown>0.66</RangedWeapon_Cooldown>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <meleeDamageBaseAmount>40</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <meleeDamageBaseAmount>40</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_Shoot</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>Bullet_Rock</projectileDef>
+        <warmupTicks>200</warmupTicks>
+        <range>24</range>
+      </li>
+    </verbs>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.001</BorealForest>
+        <IceSheet>0.001</IceSheet>
+        <Tundra>0.001</Tundra>
+        <TemperateForest>0.001</TemperateForest>
+        <TropicalRainforest>0.001</TropicalRainforest>
+        <AridShrubland>0.001</AridShrubland>
+        <Desert>0.001</Desert>
+        <ExtremeDesert>0.001</ExtremeDesert>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>6.00</baseBodySize>
+      <baseHungerRate>5.0</baseHungerRate>
+      <baseHealthScale>6.0</baseHealthScale>
+      <foodType>VegetarianRoughAnimal, DendrovoreAnimal</foodType>
+      <leatherColor>(233,233,233)</leatherColor>
+      <leatherLabel>galatross leather</leatherLabel>
+      <leatherInsulation>3.0</leatherInsulation>
+      <wildness>0.95</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.3</manhunterOnTameFailChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>120</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.99, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>200</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <!--<soundWounded>Pawn_ArcticLion_Wounded</soundWounded>
+          <soundDeath>Pawn_ArcticLion_Death</soundDeath>
+          <soundCall>Pawn_ArcticLion_Call</soundCall>
+          <soundAngry>Pawn_ArcticLion_Angry</soundAngry>-->
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+</Defs>

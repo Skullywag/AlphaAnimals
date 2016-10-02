@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+
+ <ThingDef ParentName="BaseAnimal">
+		<defName>Groundrunner</defName>
+		<label>groundrunner</label>
+		<description>A hybrid between a bear and mole, Groundrunners originally came from Cave Worlds. They were used as walking heavy tools by the locals when they hit parts that plasteel can’t break, and for hauling large boulders that their owners can’t lift.
+
+Due to their domesticated origins, they are surprisingly docile and easy to tame. Their incredible strength and sharp claws allows them to break rocks with relative ease. But out here in the Rim, those claws are usually reserved for ripping power armors apart along with their wearers.</description>
+		<statBases>
+			<MoveSpeed>3.00</MoveSpeed>
+			<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+			<MarketValue>2450</MarketValue>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>100</defaultCooldownTicks>
+				<meleeDamageBaseAmount>13</meleeDamageBaseAmount>
+				<meleeDamageDef>Scratch</meleeDamageDef>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>100</defaultCooldownTicks>
+				<meleeDamageBaseAmount>13</meleeDamageBaseAmount>
+				<meleeDamageDef>Scratch</meleeDamageDef>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>120</defaultCooldownTicks>
+				<meleeDamageBaseAmount>17</meleeDamageBaseAmount>
+				<meleeDamageDef>Bite</meleeDamageDef>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			</li>
+		</verbs>
+		<race>
+      <wildBiomes>
+        <TemperateForest>0.07</TemperateForest>     
+      </wildBiomes>
+       <herdAnimal>true</herdAnimal>
+      <predator>false</predator>
+			<body>QuadrupedAnimalWithPawsAndTail</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>2.50</baseBodySize>
+			<baseHungerRate>1</baseHungerRate>
+			<baseHealthScale>3</baseHealthScale>
+      <foodType>OmnivoreRoughAnimal</foodType>
+			<leatherColor>(156,102,31)</leatherColor>
+			<leatherLabel>groundrunner skin</leatherLabel>
+			<leatherInsulation>1.2</leatherInsulation>
+			<wildness>0.6</wildness>
+			<trainableIntelligence>Advanced</trainableIntelligence> <!-- *** Consider a new type of intelligence... -->
+			<gestationPeriodDays>90</gestationPeriodDays>
+			<litterSizeCurve>
+        <points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+			</litterSizeCurve>
+			<lifeExpectancy>25</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.50</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>2.50</minAge>
+<!--					<soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+					<soundDeath>Pawn_Muffalo_Death</soundDeath>
+					<soundCall>Pawn_Muffalo_Call</soundCall>
+					<soundAngry>Pawn_Muffalo_Angry</soundAngry> -->
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+  
+ <ThingDef ParentName="BaseAnimal">
+		<defName>Needlepost</defName>
+		<label>Needlepost</label>
+		<description>A cactus genetically modified to give it sentience. The first iteration of this creature was supposed to be a stationary tactical deterrent (the Whip Cactus). But having no intelligence or mobility crippled its effectiveness. With a little genetic engineering, it was given a mobile body, an infantile intelligence, increased aggression, and toxic barbs for good measure. The result backfired as commands proved ineffective. The facility was promptly overrun by the experiments; releasing another abomination into the Rim to contend for the top of the food chain.</description>
+		<statBases>
+			<MoveSpeed>5.00</MoveSpeed>
+			<ComfyTemperatureMin>10</ComfyTemperatureMin>
+			<MarketValue>630</MarketValue>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>80</defaultCooldownTicks>
+				<meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+				<meleeDamageDef>ToxicSting</meleeDamageDef>
+				<linkedBodyPartsGroup>Body</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>80</defaultCooldownTicks>
+				<meleeDamageBaseAmount>8</meleeDamageBaseAmount>
+				<meleeDamageDef>Bite</meleeDamageDef>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			</li>
+		</verbs>
+		<race>
+      <wildBiomes>
+        <Desert>0.04</Desert>
+        <ExtremeDesert>0.04</ExtremeDesert>      
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>SentientPlant</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>1.80</baseBodySize>
+			<baseHungerRate>0.3</baseHungerRate>
+			<baseHealthScale>0.9</baseHealthScale>
+      <foodType>OmnivoreAnimal, AnimalProduct</foodType>
+			<leatherColor>(183,216,128)</leatherColor>
+			<leatherLabel>cactus flesh</leatherLabel>
+			<leatherInsulation>0.9</leatherInsulation>
+			<wildness>0.8</wildness>
+			<trainableIntelligence>None</trainableIntelligence>
+			<gestationPeriodDays>30</gestationPeriodDays>
+			<litterSizeCurve>
+				<points>
+					<li>(0.99, 0)</li>
+					<li>(1, 1)</li>
+					<li>(1.01, 0)</li>
+				</points>
+			</litterSizeCurve>
+			<lifeExpectancy>6</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.12</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.60</minAge>
+					<soundWounded>Pawn_Needlepost_Wounded</soundWounded>
+					<soundDeath>Pawn_Needlepost_Death</soundDeath>
+					<soundCall>Pawn_Needlepost_Call</soundCall>
+					<soundAngry>Pawn_Needlepost_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<JobDefs>
+
+  <!--========= General ============-->
+
+  <JobDef>
+		<defName>AnimalRangedAttack</defName>
+		<driverClass>AlphaAnimals.JobDriver_AnimalRangedAttack</driverClass>
+		<reportString>Attacking.</reportString>
+	</JobDef>
+</JobDefs>

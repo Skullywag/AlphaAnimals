@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+
+ <ThingDef ParentName="BaseAnimal">
+		<defName>RaptorShrimp</defName>
+		<label>RaptorShrimp</label>
+		<description>A large genetically modified creature, its origins unknown. They are known to make homes in tropical regions. Instilling fear among the local inhabitants as those who pass through its territory are often reported to go missing; their bodies never found.
+
+The few that survived an encounter with these monsters report bullets being shrugged off, limbs of their companions being torn apart, and the statement “The grass has eyes.”</description>
+		<statBases>
+			<MoveSpeed>4.70</MoveSpeed>
+			<ComfyTemperatureMin>10</ComfyTemperatureMin>
+			<MarketValue>2100</MarketValue>
+			<ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+		</statBases>
+		<verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>95</defaultCooldownTicks>
+        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
+        <meleeDamageDef>Pierce</meleeDamageDef>
+        <linkedBodyPartsGroup>BladeAttackTool</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>20</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+			<li>
+				<verbClass>Verb_MeleeAttack</verbClass>
+				<defaultCooldownTicks>120</defaultCooldownTicks>
+				<meleeDamageBaseAmount>14</meleeDamageBaseAmount>
+				<meleeDamageDef>Bite</meleeDamageDef>
+				<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			</li>
+		</verbs>
+		<race>
+      <wildBiomes>
+        <TropicalRainforest>0.02</TropicalRainforest>    
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+			<body>SnakeWithTwoLimbs</body>
+			<herdAnimal>true</herdAnimal>
+			<baseBodySize>1.40</baseBodySize>
+			<baseHungerRate>1.2</baseHungerRate>
+			<baseHealthScale>1.5</baseHealthScale>
+      <foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+      <fleshType>Insectoid</fleshType>
+      <bloodDef>FilthBloodInsect</bloodDef>
+      <meatColor>(160,150,140)</meatColor>
+			<leatherColor>(96,115,96)</leatherColor>
+			<leatherLabel>raptor plate</leatherLabel>
+			<leatherInsulation>0.8</leatherInsulation>
+			<wildness>0.9</wildness>
+			<trainableIntelligence>None</trainableIntelligence>
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<litterSizeCurve>
+			<points>
+          <li>(0.5, 0)</li>
+          <li>(1, 1)</li>
+          <li>(2, 1.7)</li>
+          <li>(3, 0.7)</li>
+          <li>(3.5, 0)</li>
+        </points>
+			</litterSizeCurve>
+			<lifeExpectancy>15</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.30</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>1.50</minAge>
+					<soundWounded>Pawn_RaptorShrimp_Wounded</soundWounded>
+					<soundDeath>Pawn_RaptorShrimp_Death</soundDeath>
+					<soundCall>Pawn_RaptorShrimp_Call</soundCall>
+					<soundAngry>Pawn_RaptorShrimp_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+	</ThingDef>
+
+</Defs>

@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ============================================================ -->
+
+  <ThingDef ParentName="BaseAnimal">
+    <defName>Bouldermit</defName>
+    <label>bouldermit</label>
+    <description>
+      TODO: add description
+    </description>
+    <statBases>
+      <MoveSpeed>1.00</MoveSpeed>
+      <ComfyTemperatureMin>-65</ComfyTemperatureMin>
+      <MarketValue>2500</MarketValue>
+      <ArmorRating_Blunt>0.7</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.7</ArmorRating_Sharp>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <meleeDamageBaseAmount>28</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>90</defaultCooldownTicks>
+        <meleeDamageBaseAmount>28</meleeDamageBaseAmount>
+        <meleeDamageDef>Scratch</meleeDamageDef>
+        <linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <defaultCooldownTicks>120</defaultCooldownTicks>
+        <meleeDamageBaseAmount>32</meleeDamageBaseAmount>
+        <meleeDamageDef>Bite</meleeDamageDef>
+        <linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <wildBiomes>
+        <BorealForest>0.04</BorealForest>
+        <IceSheet>0.04</IceSheet>
+        <Tundra>0.04</Tundra>
+        <TemperateForest>0.04</TemperateForest>
+        <TropicalRainforest>0.04</TropicalRainforest>
+        <AridShrubland>0.04</AridShrubland>
+        <Desert>0.04</Desert>
+        <ExtremeDesert>0.04</ExtremeDesert>      
+      </wildBiomes>
+      <herdAnimal>false</herdAnimal>
+      <predator>false</predator>
+      <body>QuadrupedAnimalWithPawsAndTail</body>
+      <baseBodySize>4.00</baseBodySize>
+      <baseHungerRate>2.0</baseHungerRate>
+      <baseHealthScale>3.0</baseHealthScale>
+      <foodType>VegetarianRoughAnimal</foodType>
+      <leatherColor>(127,129,154)</leatherColor>
+      <leatherLabel>bouldermit carapace</leatherLabel>
+      <leatherInsulation>1.1</leatherInsulation>
+      <wildness>0.9</wildness>
+      <manhunterOnDamageChance>1.0</manhunterOnDamageChance>
+      <manhunterOnTameFailChance>0.2</manhunterOnTameFailChance>
+      <trainableIntelligence>Advanced</trainableIntelligence>
+      <gestationPeriodDays>120</gestationPeriodDays>
+      <litterSizeCurve>
+        <points>
+          <li>(0.99, 0)</li>
+          <li>(1, 1)</li>
+          <li>(1.01, 0)</li>
+        </points>
+      </litterSizeCurve>
+      <lifeExpectancy>20</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.30</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>1.50</minAge>
+          <!--<soundWounded>Pawn_ArcticLion_Wounded</soundWounded>
+          <soundDeath>Pawn_ArcticLion_Death</soundDeath>
+          <soundCall>Pawn_ArcticLion_Call</soundCall>
+          <soundAngry>Pawn_ArcticLion_Angry</soundAngry>-->
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+</Defs>
